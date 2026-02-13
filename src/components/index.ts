@@ -34,4 +34,7 @@ export * from './StablecoinPanel';
 export * from './UcdpEventsPanel';
 export * from './DisplacementPanel';
 export * from './ClimateAnomalyPanel';
-export * from './PopulationExposurePanel';
+export * from './PopulationExposurePanel';// Crypto Intelligence
+export { CryptoFearMeterPanel } from './CryptoFearMeterPanel';
+export { CryptoWhaleTrackingPanel } from './CryptoWhaleTrackingPanel';
+export { CryptoFudPanel } from './CryptoFudPanel';

@@ -74,6 +74,9 @@ import {
   DisplacementPanel,
   ClimateAnomalyPanel,
   PopulationExposurePanel,
+  CryptoFearMeterPanel,
+  CryptoWhaleTrackingPanel,
+  CryptoFudPanel,
 } from '@/components';
 import type { SearchResult } from '@/components/SearchModal';
 import { collectStoryData } from '@/services/story-data';
@@ -1573,6 +1576,17 @@ export class App {
     this.panels['macro-signals'] = new MacroSignalsPanel();
     this.panels['etf-flows'] = new ETFFlowsPanel();
     this.panels['stablecoins'] = new StablecoinPanel();
+
+    // Crypto Intelligence Panels (NEW - Fear Meter, Whale Tracking, FUD Analysis)
+    const cryptoFearMeterPanel = new CryptoFearMeterPanel();
+    this.panels['crypto-fear-meter'] = cryptoFearMeterPanel;
+
+    const cryptoWhalePanel = new CryptoWhaleTrackingPanel();
+    this.panels['crypto-whales'] = cryptoWhalePanel;
+
+    const cryptoFudPanel = new CryptoFudPanel();
+    cryptoFudPanel.setNewsArticles(this.allNews);
+    this.panels['crypto-fud'] = cryptoFudPanel;
 
     // AI Insights Panel (desktop only - hides itself on mobile)
     const insightsPanel = new InsightsPanel();

@@ -29,3 +29,7 @@ export * from './usa-spending';
 export * from './oil-analytics';
 export { generateSummary } from './summarization';
 export * from './cached-theater-posture';
+// Crypto Intelligence Services
+export * from './crypto-fear';
+export * from './crypto-whale';
+export * from './crypto-fud';

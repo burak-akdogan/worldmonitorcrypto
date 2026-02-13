@@ -16,6 +16,10 @@ export const API_URLS = {
     '/api/coingecko?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true',
   polymarket: '/api/polymarket?closed=false&order=volume&ascending=false&limit=100',
   earthquakes: '/api/earthquakes',
+  // Crypto intelligence APIs
+  cryptoWhaleAlerts: '/api/crypto-whale-alerts',
+  cryptoFudDetector: '/api/crypto-fud-detector',
+  cryptoFearMeter: '/api/crypto-fear-meter',
   // Tech variant APIs
   arxiv: (category: string = 'cs.AI', maxResults: number = 50) =>
     `/api/arxiv?category=${encodeURIComponent(category)}&max_results=${maxResults}`,
